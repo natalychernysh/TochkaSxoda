@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Точка схода — консалтинг для предпринимателей: стратегия, бренд, маркетинг, маркетплейсы, сайты и автоматизация под ключ.">
+  <title>Точка схода — упаковка бизнеса под ключ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">Точка <span>схода</span></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#directions">Направления</a>
+        <a href="#packages">Пакеты</a>
+        <a href="#founders">Кто мы</a>
+        <a href="#process">Как работаем</a>
+        <a href="#pricing">Цены</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <a href="#contact" class="header__cta">Обсудить проект</a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" aria-label="Мобильная навигация" hidden>
+    <a href="#directions">Направления</a>
+    <a href="#packages">Пакеты</a>
+    <a href="#founders">Кто мы</a>
+    <a href="#process">Как работаем</a>
+    <a href="#pricing">Цены</a>
+    <a href="#contact">Контакты</a>
+    <a href="#contact" style="margin-top:1.5rem;color:var(--accent)">Обсудить проект</a>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <p class="hero__tags">Маркетинг · Брендинг · Маркетплейсы · Сайты · Автоматизация</p>
+
+        <div class="hero__scene">
+          <figure class="hero__portrait hero__portrait--natasha reveal">
+            <img src="assets/natasha.jpg" alt="Наташа Черныш — стратегия, маркетинг, бренд" width="600" height="800" loading="eager">
+            <figcaption class="hero__caption">
+              <strong>Наташа Черныш</strong>
+              <span>стратегия · маркетинг · бренд · AI</span>
+            </figcaption>
+          </figure>
+
+          <div class="hero__center reveal">
+            <p class="hero__slogan">Точка, где бизнес перестаёт расползаться и начинает работать как система</p>
+            <h1 class="hero__title">Упаковываем бизнес под ключ: от стратегии и бренда до сайта, маркетплейсов и заявок</h1>
+            <p class="hero__subtitle">Для предпринимателей, которые хотят выйти на рынок сильнее, продавать увереннее и не тащить маркетинг, продажи и digital-рутину на себе.</p>
+            <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary">Обсудить проект</a>
+              <a href="#directions" class="btn btn--ghost">Посмотреть направления <span class="btn__arrow" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+
+          <figure class="hero__portrait hero__portrait--mark reveal">
+            <img src="assets/mark.jpg" alt="Марк Черныш — маркетплейсы, продажи, операционка" width="600" height="800" loading="eager">
+            <figcaption class="hero__caption">
+              <strong>Марк Черныш</strong>
+              <span>маркетплейсы · продажи · поставки · операционка</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="hero__entries reveal">
+          <a href="#marketing-branding" class="entry-card">
+            <div class="entry-card__title">
+              Упаковать бренд и маркетинг
+              <span class="entry-card__arrow" aria-hidden="true">→</span>
+            </div>
+            <p class="entry-card__desc">стратегия, ЦА, позиционирование, брендинг, продвижение</p>
+          </a>
+          <a href="#marketplaces" class="entry-card">
+            <div class="entry-card__title">
+              Запустить продажи на маркетплейсах
+              <span class="entry-card__arrow" aria-hidden="true">→</span>
+            </div>
+            <p class="entry-card__desc">Ozon, Wildberries, запуск, ведение, аналитика, реклама</p>
+          </a>
+          <a href="#web-automation" class="entry-card">
+            <div class="entry-card__title">
+              Собрать сайт, лендинг или бота
+              <span class="entry-card__arrow" aria-hidden="true">→</span>
+            </div>
+            <p class="entry-card__desc">сайт, заявки, воронка, Telegram-бот, автоматизация</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ДЛЯ КОГО -->
+    <section class="section section--warm" id="audience">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Аудитория</p>
+          <h2 class="section-title">Кому нужна «Точка схода»</h2>
+          <p class="section-lead">Мы особенно полезны там, где бизнесу уже мало «просто красивой картинки». Нужна система, в которой понятны продукт, упаковка, каналы продаж и следующие шаги.</p>
+        </header>
+        <div class="audience-grid">
+          <article class="audience-card reveal">
+            <h3>Вы только выходите на рынок</h3>
+            <p>Нужно понять, кому продавать, как упаковать продукт, какие каналы выбрать и с чего начать без лишних расходов.</p>
+          </article>
+          <article class="audience-card reveal">
+            <h3>Маркетинг есть, системы нет</h3>
+            <p>Реклама, сайт, соцсети, маркетплейсы и подрядчики живут отдельно. Собственник устал быть переводчиком между всеми.</p>
+          </article>
+          <article class="audience-card reveal">
+            <h3>Маркетплейсы не дают нужной прибыли</h3>
+            <p>Продажи есть, но непонятно, где теряются деньги: в ассортименте, цене, рекламе, поставках, карточках или стратегии.</p>
+          </article>
+          <article class="audience-card reveal">
+            <h3>Нужно отдать упаковку в одни руки</h3>
+            <p>Чтобы не искать отдельно маркетолога, дизайнера, таргетолога, разработчика, менеджера маркетплейсов и человека, который всё это склеит.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- НАПРАВЛЕНИЯ -->
+    <section class="section section--panel" id="directions">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <p class="eyebrow">Услуги</p>
+          <h2 class="section-title">Что мы собираем для бизнеса</h2>
+          <p class="section-lead">У нас три понятных входа. Можно прийти за одним направлением, а можно собрать полную упаковку под ключ.</p>
+        </header>
+
+        <article class="direction reveal" id="marketing-branding">
+          <p class="direction__label">Направление 1</p>
+          <h3 class="direction__title">Бренд, маркетинг и продвижение</h3>
+          <p class="direction__client">Когда нужно понять, что продавать, кому, как звучать и где брать клиентов.</p>
+          <p class="direction__text">Разбираем бизнес, рынок, ЦА, конкурентов, сильные и слабые стороны. Собираем позиционирование, бренд, стратегию, воронки и продвижение, чтобы бизнес выглядел убедительно и говорил с клиентом на правильном языке.</p>
+          <ul class="direction__list">
+            <li>анализ ЦА и сегментация</li>
+            <li>анализ конкурентов</li>
+            <li>анализ бизнеса: сильные и слабые стороны</li>
+            <li>ABC/XYZ-анализ ассортимента</li>
+            <li>позиционирование и УТП</li>
+            <li>нейминг</li>
+            <li>логотип</li>
+            <li>фирменный стиль</li>
+            <li>брендбук</li>
+            <li>tone of voice</li>
+            <li>оформление VK и соцсетей</li>
+            <li>контент-стратегия</li>
+            <li>воронки продаж</li>
+            <li>омниканальная реклама</li>
+            <li>инфлюенсеры и внешний трафик</li>
+            <li>A/B-тестирование гипотез</li>
+          </ul>
+          <div class="direction__pricing">
+            <span>стратегический аудит: <strong>от 60 000 ₽</strong></span>
+            <span>маркетинговая стратегия: <strong>от 120 000 ₽</strong></span>
+            <span>брендинг: <strong>от 95 000 ₽</strong></span>
+            <span>бренд + цифровое присутствие: <strong>от 180 000 ₽</strong></span>
+            <span>бренд под ключ: <strong>от 320 000 ₽</strong></span>
+            <span>внешнее продвижение: <strong>от 35 000 ₽</strong></span>
+          </div>
+          <a href="#contact" class="btn btn--primary">Хочу упаковать бизнес <span class="btn__arrow" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="direction reveal" id="marketplaces">
+          <p class="direction__label">Направление 2</p>
+          <h3 class="direction__title">Маркетплейсы Ozon и Wildberries</h3>
+          <p class="direction__client">Когда нужно выйти на маркетплейсы или наконец понять, где там прибыль.</p>
+          <p class="direction__text">Запускаем и ведём магазины на Ozon и Wildberries как бизнес-систему: аналитика, карточки, SEO, реклама, поставки, ассортимент, отзывы, отчёты и план роста.</p>
+          <ul class="direction__list">
+            <li>запуск магазина с нуля</li>
+            <li>ведение кабинетов Ozon/Wildberries</li>
+            <li>антикризисный аудит</li>
+            <li>анализ ниши</li>
+            <li>юнит-экономика</li>
+            <li>ABC/XYZ-анализ</li>
+            <li>чистка ассортиментной матрицы</li>
+            <li>SEO карточек</li>
+            <li>карточки товара</li>
+            <li>rich-контент</li>
+            <li>рекламные кампании</li>
+            <li>работа с отзывами и вопросами</li>
+            <li>распределение поставок</li>
+            <li>аналитика продаж</li>
+            <li>отчётность</li>
+            <li>внедрение AI в рутину магазина</li>
+          </ul>
+          <div class="direction__pricing">
+            <span>антикризисный аудит: <strong>от 60 000 ₽</strong></span>
+            <span>чистка ассортиментной матрицы: <strong>от 55 000 ₽</strong></span>
+            <span>стратегия роста на квартал: <strong>от 120 000 ₽</strong></span>
+            <span>ведение кабинета: <strong>от 40 000 ₽/мес</strong></span>
+            <span>запуск на маркетплейсах: <strong>от 150 000 ₽</strong></span>
+            <span>полный вывод на маркетплейсы: <strong>от 320 000 ₽</strong></span>
+            <span>карточки товара: <strong>от 4 500 ₽</strong> за карточку</span>
+            <span>аудит рекламного кабинета: <strong>от 22 000 ₽</strong></span>
+            <span>бот для ответов на отзывы: <strong>от 30 000 ₽</strong></span>
+          </div>
+          <a href="#contact" class="btn btn--primary">Хочу продавать на маркетплейсах <span class="btn__arrow" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="direction reveal" id="web-automation">
+          <p class="direction__label">Направление 3</p>
+          <h3 class="direction__title">Сайты, лендинги, воронки и боты</h3>
+          <p class="direction__client">Когда нужен не просто сайт, а понятный путь к заявке.</p>
+          <p class="direction__text">Создаём digital-инфраструктуру для заявок и продаж: лендинги, сайты, воронки, тексты, прототипы, Telegram-боты и автоматизацию рутинных задач.</p>
+          <ul class="direction__list">
+            <li>лендинги</li>
+            <li>сайты-визитки</li>
+            <li>многостраничные сайты</li>
+            <li>структура сайта</li>
+            <li>прототип</li>
+            <li>тексты для сайта</li>
+            <li>UX-сценарии</li>
+            <li>формы заявок</li>
+            <li>квизы</li>
+            <li>Telegram-боты</li>
+            <li>боты для FAQ</li>
+            <li>боты для заявок</li>
+            <li>боты для отзывов</li>
+            <li>автоматизация повторяющихся задач</li>
+            <li>связка сайта с мессенджерами и CRM при необходимости</li>
+          </ul>
+          <div class="direction__pricing">
+            <span>лендинг: <strong>от 80 000 ₽</strong></span>
+            <span>сайт-визитка: <strong>от 100 000 ₽</strong></span>
+            <span>многостраничный сайт: <strong>от 150 000 ₽</strong></span>
+            <span>Telegram-бот: <strong>от 30 000 ₽</strong></span>
+            <span>воронка заявок: <strong>от 50 000 ₽</strong></span>
+            <span>автоматизация задач: <strong>индивидуально</strong></span>
+          </div>
+          <a href="#contact" class="btn btn--primary">Хочу сайт и заявки <span class="btn__arrow" aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ПАКЕТЫ -->
+    <section class="section" id="packages">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Форматы</p>
+          <h2 class="section-title">Можно точечно. Можно под ключ.</h2>
+        </header>
+        <div class="packages-grid">
+          <article class="package-card reveal">
+            <h3>Диагностика и стратегия</h3>
+            <p class="package-card__for">Для тех, кто хочет понять, что делать, куда двигаться и где теряются деньги.</p>
+            <ul>
+              <li>аудит текущего состояния</li>
+              <li>анализ ЦА, конкурентов и продукта</li>
+              <li>точки роста</li>
+              <li>рекомендации по каналам</li>
+              <li>план действий на 30/60/90 дней</li>
+            </ul>
+            <p class="package-card__price">от 60 000 ₽</p>
+          </article>
+          <article class="package-card reveal">
+            <h3>Запуск бизнеса или продукта</h3>
+            <p class="package-card__for">Для тех, кто выходит на рынок и хочет сразу собрать фундамент.</p>
+            <ul>
+              <li>позиционирование</li>
+              <li>базовый брендинг</li>
+              <li>структура сайта или лендинга</li>
+              <li>упаковка соцсетей</li>
+              <li>воронка заявок</li>
+              <li>стартовая маркетинговая стратегия</li>
+            </ul>
+            <p class="package-card__price">от 220 000 ₽</p>
+          </article>
+          <article class="package-card reveal">
+            <h3>Упаковка бизнеса под ключ</h3>
+            <p class="package-card__for">Для тех, кому нужна полная система: бренд, сайт, соцсети, маркетинг, маркетплейсы и автоматизация.</p>
+            <ul>
+              <li>стратегия</li>
+              <li>брендинг</li>
+              <li>сайт/лендинг</li>
+              <li>упаковка VK</li>
+              <li>рекламная структура</li>
+              <li>маркетплейсы при необходимости</li>
+              <li>бот или автоматизация</li>
+              <li>план продвижения</li>
+            </ul>
+            <p class="package-card__price">от 320 000 ₽</p>
+          </article>
+          <article class="package-card reveal">
+            <h3>Внешний маркетинговый отдел</h3>
+            <p class="package-card__for">Для предпринимателей, которые хотят передать маркетинговую операционку и контроль в одни руки.</p>
+            <ul>
+              <li>ежемесячная аналитика</li>
+              <li>план продвижения</li>
+              <li>координация задач</li>
+              <li>реклама</li>
+              <li>соцсети/VK</li>
+              <li>сайт/лендинги</li>
+              <li>подрядчики и отчётность</li>
+            </ul>
+            <p class="package-card__price">от 120 000 ₽/мес</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОЧЕМУ МЫ -->
+    <section class="section section--dark">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" style="color: var(--peach-deep)">Подход</p>
+          <h2 class="section-title">Мы не продаём набор услуг. Мы собираем бизнес в рабочую систему.</h2>
+        </header>
+        <div class="thesis-list">
+          <div class="thesis-item reveal">
+            <p>Сначала смотрим на бизнес и цифры, потом предлагаем инструменты.</p>
+          </div>
+          <div class="thesis-item reveal">
+            <p>Работаем с собственниками и понимаем управленческую нагрузку.</p>
+          </div>
+          <div class="thesis-item reveal">
+            <p>Соединяем маркетинг, бренд, продажи, маркетплейсы, сайты и AI.</p>
+          </div>
+          <div class="thesis-item reveal">
+            <p>Не продаём универсальные пакеты там, где нужна индивидуальная стратегия.</p>
+          </div>
+          <div class="thesis-item reveal">
+            <p>Помогаем предпринимателю освободить голову от рутины и вернуться к управлению.</p>
+          </div>
+          <div class="thesis-item reveal">
+            <p>Не делаем «красиво ради красиво». Упаковка должна помогать продавать, объяснять и усиливать доверие.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КТО ЗА ЭТИМ СТОИТ -->
+    <section class="section section--warm" id="founders">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Основатели</p>
+          <h2 class="section-title">Две экспертизы. Один взгляд на бизнес.</h2>
+          <p class="section-lead">«Точка схода» создана предпринимателями для предпринимателей. Мы понимаем не только маркетинг, дизайн и рекламу, но и то, как решения выглядят в реальной экономике бизнеса: в деньгах, задачах, поставках, подрядчиках, сроках и ответственности.</p>
+        </header>
+        <div class="founders-grid">
+          <article class="founder-card founder-card--natasha reveal">
+            <div class="founder-card__photo">
+              <img src="assets/natasha.jpg" alt="Наташа Черныш" width="400" height="533" loading="lazy">
+            </div>
+            <div>
+              <h3>Наташа Черныш</h3>
+              <p class="founder-card__role">Маркетолог · аналитик · бизнес-коуч</p>
+              <p>Разбираю цифры, ЦА, упаковку, стратегию и точки роста. Внедряю AI в работу команд. Работаю с собственниками там, где нужно принимать решения, а не просто «сделать красиво».</p>
+            </div>
+          </article>
+          <article class="founder-card founder-card--mark reveal">
+            <div class="founder-card__photo">
+              <img src="assets/mark.jpg" alt="Марк Черныш" width="400" height="533" loading="lazy">
+            </div>
+            <div>
+              <h3>Марк Черныш</h3>
+              <p class="founder-card__role">Эксперт по маркетплейсам и продажам</p>
+              <p>Владелец сети магазинов на WB и Ozon. Знаю изнутри, как магазин зарабатывает, а не просто продаёт. Отвечаю за продажи, поставки, кабинеты и операционку.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАК РАБОТАЕМ -->
+    <section class="section section--panel" id="process">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Процесс</p>
+          <h2 class="section-title">От «непонятно, с чего начать» до понятного плана</h2>
+        </header>
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <h3>Знакомство</h3>
+            <p>30 минут разговора: что болит, какие цели, какие ограничения, какие цифры уже есть.</p>
+          </div>
+          <div class="process-step reveal">
+            <h3>Экспресс-аудит</h3>
+            <p>Смотрим бизнес, нишу, сайт, соцсети, маркетплейсы или текущую упаковку. Находим главные точки роста.</p>
+          </div>
+          <div class="process-step reveal">
+            <h3>Предложение и смета</h3>
+            <p>Подбираем формат: разовая услуга, проект, пакет или ежемесячное сопровождение.</p>
+          </div>
+          <div class="process-step reveal">
+            <h3>Реализация</h3>
+            <p>Собираем задачи, сроки, ответственных, контрольные точки и отчётность.</p>
+          </div>
+          <div class="process-step reveal">
+            <h3>Корректировки и рост</h3>
+            <p>Смотрим цифры, тестируем гипотезы, усиливаем то, что работает, убираем лишнее.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЦЕНЫ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Стоимость</p>
+          <h2 class="section-title">Стоимость зависит от объёма, но порядок такой</h2>
+        </header>
+        <div class="pricing-grid reveal">
+          <div class="pricing-row"><span>Стратегический аудит</span><strong>от 60 000 ₽</strong></div>
+          <div class="pricing-row"><span>Маркетинговая стратегия</span><strong>от 120 000 ₽</strong></div>
+          <div class="pricing-row"><span>Брендинг</span><strong>от 95 000 ₽</strong></div>
+          <div class="pricing-row"><span>Бренд + цифровое присутствие</span><strong>от 180 000 ₽</strong></div>
+          <div class="pricing-row"><span>Бренд под ключ</span><strong>от 320 000 ₽</strong></div>
+          <div class="pricing-row"><span>Лендинг</span><strong>от 80 000 ₽</strong></div>
+          <div class="pricing-row"><span>Сайт</span><strong>от 150 000 ₽</strong></div>
+          <div class="pricing-row"><span>Telegram-бот</span><strong>от 30 000 ₽</strong></div>
+          <div class="pricing-row"><span>Ведение маркетплейсов</span><strong>от 40 000 ₽/мес</strong></div>
+          <div class="pricing-row"><span>Запуск на маркетплейсах</span><strong>от 150 000 ₽</strong></div>
+          <div class="pricing-row"><span>Внешнее продвижение</span><strong>от 35 000 ₽</strong></div>
+          <div class="pricing-row"><span>Внешний маркетинговый отдел</span><strong>от 120 000 ₽/мес</strong></div>
+        </div>
+        <p class="pricing-note reveal">Финальная стоимость рассчитывается после короткого аудита. Большинство проектов индивидуальны: разные ниши, разные цели, разные точки входа.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--warm" id="faq">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Вопросы</p>
+          <h2 class="section-title">Частые вопросы</h2>
+        </header>
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>Можно прийти только за одной услугой?</summary>
+            <p class="faq-item__answer">Да. Три направления — самостоятельные входы: бренд и маркетинг, маркетплейсы или сайт с автоматизацией. Не обязательно брать всё сразу.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Вы работаете только с маркетплейсами?</summary>
+            <p class="faq-item__answer">Нет. Маркетплейсы — одно из направлений. Параллельно делаем стратегию, бренд, сайты, воронки, рекламу и сопровождение маркетинга целиком.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Можно ли начать с аудита?</summary>
+            <p class="faq-item__answer">Да, это нормальный старт. Стратегический или антикризисный аудит помогает понять, где теряются деньги и что делать дальше — без обязательства сразу брать большой пакет.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Сколько длится запуск под ключ?</summary>
+            <p class="faq-item__answer">Зависит от объёма и ниши. Обычно полная упаковка занимает от нескольких недель до 2–3 месяцев. Сроки фиксируем в смете после аудита.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Вы занимаетесь рекламой?</summary>
+            <p class="faq-item__answer">Да: омниканальное продвижение, реклама на маркетплейсах, внешний трафик, VK и координация подрядчиков — в рамках стратегии или внешнего маркетингового отдела.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Вы делаете сайты и тексты?</summary>
+            <p class="faq-item__answer">Да. Лендинги, многостраничные сайты, прототипы, тексты, формы заявок, квизы и Telegram-боты — как отдельное направление или в составе упаковки под ключ.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Можно ли передать вам всё сопровождение?</summary>
+            <p class="faq-item__answer">Да, формат «внешний маркетинговый отдел» как раз про это: аналитика, план, задачи, реклама, соцсети, сайт и отчётность в одних руках.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Почему цены указаны «от»?</summary>
+            <p class="faq-item__answer">Потому что у разных бизнесов разный масштаб, ниша и точка входа. После короткого аудита даём смету с конкретным объёмом работ — без сюрпризов по ходу.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Что нужно подготовить перед началом работы?</summary>
+            <p class="faq-item__answer">Достаточно рассказать, что продаёте, какие каналы уже есть и что болит. Если есть — цифры по продажам, доступы к кабинетам или ссылка на текущий сайт. Остальное разберём на знакомстве.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title reveal">Расскажите, где сейчас буксует бизнес. Мы покажем, с чего разумнее начать.</h2>
+        <p class="contact__text reveal">Запуск, просадка, хаос в маркетинге, маркетплейсы, сайт, упаковка или автоматизация — начнём с разговора и соберём понятный маршрут без лишней суеты.</p>
+        <div class="contact__actions reveal">
+          <a href="https://t.me/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a href="#contact" class="btn btn--ghost">Записаться на созвон</a>
+        </div>
+        <div class="contact__links reveal">
+          <div>
+            <strong>Telegram</strong>
+            <a href="https://t.me/" target="_blank" rel="noopener noreferrer">@tochkashoda</a>
+          </div>
+          <div>
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">Написать</a>
+          </div>
+          <div>
+            <strong>Телефон</strong>
+            <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+          </div>
+          <div>
+            <strong>Сайт</strong>
+            <a href="https://tochka-shoda.ru">tochka-shoda.ru</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Точка схода</span>
+      <span>Консалтинг для предпринимателей</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const header = document.querySelector('.header');
+      const burger = document.querySelector('.burger');
+      const mobileNav = document.querySelector('.mobile-nav');
+
+      window.addEventListener('scroll', function () {
+        header.classList.toggle('is-scrolled', window.scrollY > 40);
+      }, { passive: true });
+
+      burger.addEventListener('click', function () {
+        const open = burger.classList.toggle('is-open');
+        mobileNav.classList.toggle('is-open', open);
+        burger.setAttribute('aria-expanded', open);
+        mobileNav.hidden = !open;
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+
+      mobileNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          burger.classList.remove('is-open');
+          mobileNav.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+          mobileNav.hidden = true;
+          document.body.style.overflow = '';
+        });
+      });
+
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(function (el) { observer.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+    })();
+  </script>
+</body>
+</html>
