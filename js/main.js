@@ -7,7 +7,7 @@
   const progressBar = document.querySelector('.scroll-progress');
 
   const wavesOpts = {
-    lineColor: '#5a5555',
+    lineColor: 'rgba(90, 70, 60, 0.45)',
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
     waveSpeedX: 0.01,
     waveSpeedY: 0.01,
@@ -27,7 +27,7 @@
   if (wavesContact && window.Waves) {
     new window.Waves(wavesContact, {
       ...wavesOpts,
-      lineColor: 'rgba(255,255,255,0.12)',
+      lineColor: 'rgba(224, 99, 40, 0.2)',
       backgroundColor: 'transparent',
       waveAmpX: 24,
       waveAmpY: 12
