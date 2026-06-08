@@ -1,0 +1,245 @@
+{
+  "heroCollage": {
+    "src": "assets/hero-tags/tags.png",
+    "alt": "Кейсы агентства — Bellissima, Тишь да пар, marmori, Daizy Mitchell, сайты и боты",
+    "link": "#portfolio",
+    "height": "min(88vh, 52rem)",
+    "lift": "14rem"
+  },
+  "heroTags": [],
+  "portfolio": [
+    {
+      "id": "tish",
+      "cover": "assets/Тишь да пар/Превью.png",
+      "gallery": [
+        "assets/Тишь да пар/фото1.png",
+        "assets/Тишь да пар/фото2.png",
+        "assets/Тишь да пар/фото3.png",
+        "assets/Тишь да пар/фото4.png",
+        "assets/Тишь да пар/фото5.png",
+        "assets/Тишь да пар/фото6.png",
+        "assets/Тишь да пар/фото7.png",
+        "assets/Тишь да пар/фото8.png",
+        "assets/Тишь да пар/фото9.png"
+      ],
+      "galleryAspect": "4/3",
+      "alt": "Тишь да пар",
+      "tag": "Бренд · digital",
+      "title": "Тишь да пар",
+      "desc": "Загородный отдых: нейминг, визуал и упаковка VK",
+      "folder": "Тишь да пар"
+    },
+    {
+      "id": "marmori",
+      "cover": "assets/marmori/Превью.png",
+      "gallery": [
+        "assets/marmori/фото1.png",
+        "assets/marmori/фото2.png",
+        "assets/marmori/фото3.png",
+        "assets/marmori/фото4.png",
+        "assets/marmori/фото5.png",
+        "assets/marmori/фото6.png",
+        "assets/marmori/фото7.png",
+        "assets/marmori/фото8.png",
+        "assets/marmori/фото9.png"
+      ],
+      "alt": "marmori",
+      "tag": "Упаковка · MP",
+      "title": "marmori",
+      "desc": "Подарочные наборы и визуал для маркетплейса",
+      "folder": "marmori"
+    },
+    {
+      "id": "daizy",
+      "cover": "assets/Daizy Mitchell/Превью.png",
+      "gallery": [
+        "assets/Daizy Mitchell/фото1.png",
+        "assets/Daizy Mitchell/фото2.png",
+        "assets/Daizy Mitchell/фото3.png",
+        "assets/Daizy Mitchell/фото4.png",
+        "assets/Daizy Mitchell/фото5.png",
+        "assets/Daizy Mitchell/фото6.png"
+      ],
+      "alt": "Daizy Mitchell",
+      "tag": "Брендинг · контент",
+      "title": "Daizy Mitchell",
+      "desc": "Брендбук, lookbook и контент-система",
+      "folder": "Daizy Mitchell"
+    },
+    {
+      "id": "bellissima",
+      "cover": "assets/Bellissima/Превью.png",
+      "gallery": [
+        "assets/Bellissima/фото1.png",
+        "assets/Bellissima/фото2.png",
+        "assets/Bellissima/фото3.png",
+        "assets/Bellissima/фото4.png",
+        "assets/Bellissima/фото5.png",
+        "assets/Bellissima/фото6.png",
+        "assets/Bellissima/фото7.png",
+        "assets/Bellissima/фото8.png",
+        "assets/Bellissima/фото9.png",
+        "assets/Bellissima/фото10.png",
+        "assets/Bellissima/фото11.png",
+        "assets/Bellissima/фото12.png"
+      ],
+      "alt": "Bellissima",
+      "tag": "Контент",
+      "title": "Bellissima",
+      "desc": "Визуал и подача премиального бренда",
+      "folder": "Bellissima"
+    },
+    {
+      "id": "mp",
+      "cover": "assets/Нижнее белье и колготки/Превью.png",
+      "gallery": [
+        "assets/Нижнее белье и колготки/фото1.png",
+        "assets/Нижнее белье и колготки/фото2.png",
+        "assets/Нижнее белье и колготки/фото3.png",
+        "assets/Нижнее белье и колготки/фото4.png",
+        "assets/Нижнее белье и колготки/фото5.png",
+        "assets/Нижнее белье и колготки/фото6.png",
+        "assets/Нижнее белье и колготки/фото7.png",
+        "assets/Нижнее белье и колготки/фото8.png",
+        "assets/Нижнее белье и колготки/фото9.png",
+        "assets/Нижнее белье и колготки/фото10.png",
+        "assets/Нижнее белье и колготки/фото11.png",
+        "assets/Нижнее белье и колготки/фото12.png",
+        "assets/Нижнее белье и колготки/фото13.png"
+      ],
+      "alt": "Карточки маркетплейсов",
+      "tag": "Маркетплейсы",
+      "title": "Нижнее белье и колготки",
+      "desc": "Rich-контент для Ozon и Wildberries",
+      "folder": "Нижнее белье и колготки"
+    },
+    {
+      "id": "digital",
+      "cover": "assets/Сайты, лендинги, боты/Превью.png",
+      "gallery": [
+        "assets/Сайты, лендинги, боты/фото1.png",
+        "assets/Сайты, лендинги, боты/фото2.png",
+        "assets/Сайты, лендинги, боты/фото3.png"
+      ],
+      "galleryAspect": "4/3",
+      "alt": "Сайты и боты",
+      "tag": "Сайты · автоматизация",
+      "title": "Сайты, лендинги, боты",
+      "desc": "Цифровые решения и автоматизация под задачу бизнеса",
+      "folder": "Сайты, лендинги, боты"
+    },
+    {
+      "id": "limonades",
+      "cover": "assets/Итальянские лимонады/Превью.png",
+      "gallery": [
+        "assets/Итальянские лимонады/фото1.webp",
+        "assets/Итальянские лимонады/фото2.webp",
+        "assets/Итальянские лимонады/фото3.webp",
+        "assets/Итальянские лимонады/фото4.png"
+      ],
+      "alt": "Итальянские лимонады",
+      "tag": "Каталог · B2B",
+      "title": "Итальянские лимонады",
+      "desc": "Каталоги, ассортимент и материалы для дистрибьюторов",
+      "folder": "Итальянские лимонады"
+    },
+    {
+      "id": "jewelry",
+      "cover": "assets/Бижутерия/Превью.png",
+      "gallery": [
+        "assets/Бижутерия/фото1.png",
+        "assets/Бижутерия/фото2.png",
+        "assets/Бижутерия/фото3.JPG",
+        "assets/Бижутерия/фото4.JPG",
+        "assets/Бижутерия/фото5.JPG",
+        "assets/Бижутерия/фото6.JPG",
+        "assets/Бижутерия/фото7.png",
+        "assets/Бижутерия/фото8.png"
+      ],
+      "alt": "Бижутерия",
+      "tag": "Брендинг · контент",
+      "title": "Бижутерия",
+      "desc": "Визуал, упаковка и подача ювелирного бренда",
+      "folder": "Бижутерия"
+    },
+    {
+      "id": "branding",
+      "cover": "assets/Брендинг/Превью.png",
+      "gallery": [
+        "assets/Брендинг/фото1.png",
+        "assets/Брендинг/фото2.png",
+        "assets/Брендинг/фото3.png"
+      ],
+      "alt": "Брендинг",
+      "tag": "Брендинг",
+      "title": "Брендинг",
+      "desc": "Айдентика, носители и визуальная система бренда",
+      "folder": "Брендинг"
+    },
+    {
+      "id": "concepts",
+      "cover": "assets/Концепты для бренда одежды/Превью.png",
+      "gallery": [
+        "assets/Концепты для бренда одежды/фото1.JPG",
+        "assets/Концепты для бренда одежды/фото2.JPG",
+        "assets/Концепты для бренда одежды/фото3.PNG"
+      ],
+      "alt": "Концепты для бренда одежды",
+      "tag": "Концепт · мода",
+      "title": "Концепты для бренда одежды",
+      "desc": "Визуальные направления и mood для fashion-бренда",
+      "folder": "Концепты для бренда одежды"
+    }
+  ],
+  "texts": {
+    "hero": {
+      "title": "Упаковываем бизнес под ключ — от стратегии до заявок",
+      "subtitle": "Агентство полного цикла — стратегия, бренд, маркетинг, маркетплейсы, сайты и автоматизация — в одних руках. Вы управляете бизнесом, мы собираем систему вокруг него."
+    },
+    "sections": {
+      "audience": {
+        "eyebrow": "Для кого",
+        "title": "Кому нужна «Точка схода»",
+        "lead": "Там, где уже мало «просто красивой картинки» — нужна система: продукт, упаковка, каналы и следующие шаги."
+      },
+      "directions": {
+        "eyebrow": "Услуги",
+        "title": "Три входа в систему",
+        "lead": "Одно направление или полная упаковка — выбираете вы, собираем мы."
+      },
+      "portfolio": {
+        "eyebrow": "Портфолио",
+        "title": "Кейсы, которые говорят сами",
+        "lead": "Брендинг, маркетплейсы, digital и упаковка — реальные проекты, не moodboard ради moodboard."
+      },
+      "process": {
+        "eyebrow": "Процесс",
+        "title": "Как мы работаем",
+        "lead": "Пять шагов от хаоса к системе — с понятными точками контроля на каждом этапе."
+      },
+      "about": {
+        "eyebrow": "О нас",
+        "title": "Команда, которая собирает маркетинг в систему",
+        "lead": "«Точка схода» — агентство полного цикла. Стратегия, бренд, digital, маркетплейсы и автоматизация — одна команда, один процесс, одна ответственность за результат."
+      }
+    },
+    "contact": {
+      "title": "Где опускаются руки и не хватает времени объять необъятное — покажем, с чего начать",
+      "text": "Запуск, MП, сайт, упаковка или автоматизация — соберём маршрут без суеты.",
+      "actions": [
+        { "label": "Telegram →", "href": "https://t.me/tochkashoda", "primary": true },
+        { "label": "Созвон", "href": "#contact", "primary": false }
+      ],
+      "telegramUrl": "https://t.me/tochkashoda",
+      "telegramLabel": "Telegram →",
+      "callUrl": "#contact",
+      "callLabel": "Созвон",
+      "links": [
+        { "href": "https://t.me/tochkashoda", "label": "@tochkashoda", "external": true },
+        { "href": "https://wa.me/79000101021", "label": "WhatsApp", "external": true },
+        { "href": "tel:+79000101021", "label": "+7 (900) 010-10-21", "external": false },
+        { "href": "https://tochka-shoda.ru", "label": "tochka-shoda.ru", "external": true }
+      ]
+    }
+  }
+}

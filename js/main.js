@@ -96,33 +96,120 @@
     });
   }
 
-  function applySiteImages() {
-    const data = window.SITE_IMAGES;
-    if (!data) return;
+  function renderPortfolioGrid() {
+    const grid = document.getElementById('portfolio-grid');
+    const data = window.SITE_IMAGES?.portfolio;
+    if (!grid || !data?.length) return;
 
-    (data.portfolio || []).forEach(function (item) {
-      const card = document.querySelector('[data-case="' + item.id + '"]');
-      if (!card) return;
-      const img = card.querySelector('.portfolio-card__media img');
-      if (img) {
-        const cover = item.cover || item.src;
-        if (cover) img.src = cover;
-        if (item.alt) img.alt = item.alt;
-        if (item.focus) img.style.objectPosition = item.focus;
-      }
-      const media = card.querySelector('.portfolio-card__media');
-      if (media) {
-        if (item.fit === 'contain') media.classList.add('media-cell--contain');
-        else media.classList.remove('media-cell--contain');
-      }
-      const tag = card.querySelector('.portfolio-card__tag');
-      const title = card.querySelector('h3');
-      const desc = card.querySelector('.portfolio-card__body p');
-      if (tag && item.tag) tag.textContent = item.tag;
-      if (title && item.title) title.textContent = item.title;
-      if (desc && item.desc) desc.textContent = item.desc;
-      if (item.title) card.setAttribute('aria-label', 'Открыть кейс: ' + item.title);
+    grid.innerHTML = '';
+    data.forEach(function (item) {
+      const article = document.createElement('article');
+      article.className = 'portfolio-card reveal portfolio-card--open is-visible';
+      article.id = 'case-' + item.id;
+      article.setAttribute('data-case', item.id);
+      article.tabIndex = 0;
+      article.role = 'button';
+      article.setAttribute('aria-label', 'Открыть кейс: ' + (item.title || item.id));
+
+      const cover = item.cover || (item.folder ? 'assets/' + item.folder + '/Превью.png' : '');
+      const media = document.createElement('div');
+      media.className = 'portfolio-card__media';
+      if (item.fit === 'contain') media.classList.add('media-cell--contain');
+
+      const img = document.createElement('img');
+      img.src = cover;
+      img.alt = item.alt || item.title || '';
+      img.width = 800;
+      img.height = 600;
+      img.loading = 'lazy';
+      if (item.focus) img.style.objectPosition = item.focus;
+      media.appendChild(img);
+
+      const body = document.createElement('div');
+      body.className = 'portfolio-card__body';
+      body.innerHTML =
+        '<span class="portfolio-card__tag">' + (item.tag || '') + '</span>' +
+        '<h3>' + (item.title || '') + '</h3>' +
+        '<p>' + (item.desc || '') + '</p>';
+
+      article.appendChild(media);
+      article.appendChild(body);
+      grid.appendChild(article);
     });
+  }
+
+  function applySiteImages() {
+    renderPortfolioGrid();
+  }
+
+  function applyContactData() {
+    const contact = window.SITE_IMAGES?.texts?.contact;
+    if (!contact) return;
+
+    const section = document.getElementById('contact');
+    if (!section) return;
+
+    function setText(sel, val) {
+      if (!val) return;
+      const el = section.querySelector(sel);
+      if (el) el.textContent = val;
+    }
+
+    setText('.section-title', contact.title);
+    setText('.contact__text', contact.text);
+
+    function contactActions() {
+      if (Array.isArray(contact.actions) && contact.actions.length) return contact.actions;
+      const legacy = [];
+      if (contact.telegramUrl || contact.telegramLabel) {
+        legacy.push({
+          label: contact.telegramLabel || 'Telegram →',
+          href: contact.telegramUrl || '#',
+          primary: true
+        });
+      }
+      if (contact.callUrl || contact.callLabel) {
+        legacy.push({
+          label: contact.callLabel || 'Созвон',
+          href: contact.callUrl || '#contact',
+          primary: false
+        });
+      }
+      return legacy;
+    }
+
+    const actionsRoot = document.getElementById('contact-actions');
+    if (actionsRoot) {
+      actionsRoot.innerHTML = '';
+      contactActions().forEach(function (action) {
+        if (!action?.href || !action?.label) return;
+        const a = document.createElement('a');
+        a.href = action.href;
+        a.textContent = action.label;
+        a.className = 'btn ' + (action.primary ? 'btn--primary' : 'btn--ghost btn--light');
+        if (!/^tel:|^mailto:|^#/.test(action.href)) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
+        actionsRoot.appendChild(a);
+      });
+    }
+
+    const linksRoot = document.getElementById('contact-links');
+    if (linksRoot && Array.isArray(contact.links)) {
+      linksRoot.innerHTML = '';
+      contact.links.forEach(function (link) {
+        if (!link?.href || !link?.label) return;
+        const a = document.createElement('a');
+        a.href = link.href;
+        a.textContent = link.label;
+        if (link.external !== false && !/^tel:|^mailto:|^#/.test(link.href)) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
+        linksRoot.appendChild(a);
+      });
+    }
   }
 
   function initPortfolioModal() {
@@ -134,29 +221,36 @@
     const currentEl = document.getElementById('portfolio-modal-current');
     const totalEl = document.getElementById('portfolio-modal-total');
     const dotsEl = document.getElementById('portfolio-modal-dots');
-    const prevBtn = document.querySelector('[data-portfolio-prev]');
-    const nextBtn = document.querySelector('[data-portfolio-next]');
-    const portfolio = window.SITE_IMAGES?.portfolio || [];
-    const byId = {};
-    portfolio.forEach(function (item) { byId[item.id] = item; });
+    const grid = document.getElementById('portfolio-grid');
 
     let active = null;
     let index = 0;
 
+    function getItem(id) {
+      return (window.SITE_IMAGES?.portfolio || []).find(function (item) {
+        return item.id === id;
+      });
+    }
+
     function renderSlide() {
-      if (!active || !active.gallery?.length) return;
+      if (!active?.gallery?.length || !imgEl) return;
       const total = active.gallery.length;
       const src = active.gallery[index];
-      imgEl.src = src;
+      if (!src) return;
+      if (imgEl.getAttribute('src') !== src) imgEl.setAttribute('src', src);
       imgEl.alt = (active.title || '') + ' — фото ' + (index + 1);
-      currentEl.textContent = String(index + 1);
-      totalEl.textContent = String(total);
+      if (currentEl) currentEl.textContent = String(index + 1);
+      if (totalEl) totalEl.textContent = String(total);
+      if (dotsEl) {
+        dotsEl.querySelectorAll('.portfolio-modal__dot').forEach(function (dot, i) {
+          dot.classList.toggle('is-active', i === index);
+          dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+        });
+      }
+      const prevBtn = modal?.querySelector('[data-portfolio-prev]');
+      const nextBtn = modal?.querySelector('[data-portfolio-next]');
       if (prevBtn) prevBtn.disabled = index <= 0;
       if (nextBtn) nextBtn.disabled = index >= total - 1;
-      dotsEl.querySelectorAll('.portfolio-modal__dot').forEach(function (dot, i) {
-        dot.classList.toggle('is-active', i === index);
-        dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
-      });
     }
 
     function setAspect() {
@@ -165,6 +259,7 @@
     }
 
     function buildDots() {
+      if (!dotsEl) return;
       dotsEl.innerHTML = '';
       if (!active?.gallery) return;
       active.gallery.forEach(function (_, i) {
@@ -174,7 +269,9 @@
         dot.setAttribute('role', 'tab');
         dot.setAttribute('aria-label', 'Фото ' + (i + 1));
         dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
-        dot.addEventListener('click', function () {
+        dot.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
           index = i;
           renderSlide();
         });
@@ -183,7 +280,7 @@
     }
 
     function openModal(id, startIndex) {
-      const item = byId[id];
+      const item = getItem(id);
       if (!item?.gallery?.length || !modal) return;
       active = item;
       index = typeof startIndex === 'number' ? startIndex : 0;
@@ -203,41 +300,71 @@
       modal.classList.remove('is-open');
       modal.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('portfolio-modal-open');
-      imgEl.removeAttribute('src');
+      if (imgEl) imgEl.removeAttribute('src');
       active = null;
+      index = 0;
     }
 
     function step(delta) {
-      if (!active?.gallery) return;
+      if (!active?.gallery?.length) return;
       index = Math.max(0, Math.min(active.gallery.length - 1, index + delta));
       renderSlide();
     }
 
-    document.querySelectorAll('.portfolio-card--open').forEach(function (card) {
-      const id = card.getAttribute('data-case');
-      function open() { openModal(id, 0); }
-      card.addEventListener('click', open);
-      card.addEventListener('keydown', function (e) {
+    if (grid && !grid.dataset.modalBound) {
+      grid.dataset.modalBound = '1';
+      grid.addEventListener('click', function (e) {
+        const card = e.target.closest('.portfolio-card--open');
+        if (!card) return;
+        openModal(card.getAttribute('data-case'), 0);
+      });
+      grid.addEventListener('keydown', function (e) {
+        const card = e.target.closest('.portfolio-card--open');
+        if (!card) return;
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          open();
+          openModal(card.getAttribute('data-case'), 0);
         }
       });
-    });
+    }
 
-    prevBtn?.addEventListener('click', function () { step(-1); });
-    nextBtn?.addEventListener('click', function () { step(1); });
+    if (modal && !modal.dataset.modalBound) {
+      modal.dataset.modalBound = '1';
 
-    modal?.querySelectorAll('[data-portfolio-close]').forEach(function (el) {
-      el.addEventListener('click', closeModal);
-    });
+      modal.addEventListener('click', function (e) {
+        if (!modal.classList.contains('is-open')) return;
+        if (e.target.closest('[data-portfolio-prev]')) {
+          e.preventDefault();
+          e.stopPropagation();
+          step(-1);
+          return;
+        }
+        if (e.target.closest('[data-portfolio-next]')) {
+          e.preventDefault();
+          e.stopPropagation();
+          step(1);
+          return;
+        }
+        if (e.target.closest('[data-portfolio-close]')) {
+          e.preventDefault();
+          closeModal();
+        }
+      });
 
-    document.addEventListener('keydown', function (e) {
-      if (!modal?.classList.contains('is-open')) return;
-      if (e.key === 'Escape') closeModal();
-      if (e.key === 'ArrowLeft') step(-1);
-      if (e.key === 'ArrowRight') step(1);
-    });
+      document.addEventListener('keydown', function (e) {
+        if (!modal.classList.contains('is-open')) return;
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeModal();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          step(-1);
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          step(1);
+        }
+      });
+    }
 
     return {
       open: openModal,
@@ -245,9 +372,52 @@
     };
   }
 
-  renderHeroTags();
-  applySiteImages();
-  const portfolioModal = initPortfolioModal();
+  function applySiteTexts() {
+    const texts = window.SITE_IMAGES?.texts;
+    if (!texts) return;
+
+    function setText(sel, val) {
+      if (!val) return;
+      const el = document.querySelector(sel);
+      if (el) el.textContent = val;
+    }
+
+    function setIn(root, sel, val) {
+      if (!val || !root) return;
+      const el = root.querySelector(sel);
+      if (el) el.textContent = val;
+    }
+
+    if (texts.hero) {
+      setText('.hero__title', texts.hero.title);
+      setText('.hero__subtitle', texts.hero.subtitle);
+    }
+
+    Object.keys(texts.sections || {}).forEach(function (key) {
+      const block = texts.sections[key];
+      const section = document.getElementById(key);
+      if (!section || !block) return;
+      setIn(section, '.eyebrow', block.eyebrow);
+      setIn(section, '.section-title', block.title);
+      setIn(section, '.section-lead', block.lead);
+    });
+
+    if (texts.contact) {
+      applyContactData();
+    }
+  }
+
+  let portfolioModal = null;
+
+  function bootContent() {
+    applySiteTexts();
+    renderHeroTags();
+    renderPortfolioGrid();
+    portfolioModal = initPortfolioModal();
+    focusPortfolioCase();
+  }
+
+  (window.siteReady || Promise.resolve()).finally(bootContent);
 
   function focusPortfolioCase() {
     const hash = window.location.hash;

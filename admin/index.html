@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Админка — Точка схода</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <div id="login-screen" class="screen">
+    <form id="login-form" class="card card--narrow">
+      <h1>Точка схода</h1>
+      <p class="muted">Вход в админку</p>
+      <p class="hint muted" id="login-hint">Открывайте через сервер после <code>npm start</code> (порт в .env, по умолчанию <strong>3001</strong>)</p>
+      <label class="field">
+        <span>Пароль</span>
+        <input type="password" id="login-password" name="password" autocomplete="current-password" required>
+      </label>
+      <p id="login-error" class="error" role="alert"></p>
+      <p id="login-status" class="status"></p>
+      <button type="button" id="login-btn" class="btn btn--primary">Войти</button>
+    </form>
+  </div>
+
+  <div id="app" class="app" hidden>
+    <p id="app-loading" class="app-loading" hidden>Загружаю данные…</p>
+    <header class="topbar">
+      <div class="topbar__brand">Точка схода · админка</div>
+      <nav class="tabs" role="tablist">
+        <button type="button" class="tab is-active" data-tab="stats">Статистика</button>
+        <button type="button" class="tab" data-tab="texts">Тексты</button>
+        <button type="button" class="tab" data-tab="contacts">Контакты</button>
+        <button type="button" class="tab" data-tab="portfolio">Портфолио</button>
+        <button type="button" class="tab" data-tab="upload">Фото</button>
+      </nav>
+      <button type="button" id="logout-btn" class="btn btn--ghost">Выйти</button>
+    </header>
+
+    <main class="main">
+      <section id="panel-stats" class="panel is-active">
+        <div class="panel-head">
+          <h2>Статистика посещений</h2>
+          <label class="inline-field">
+            <span>Период</span>
+            <select id="stats-days">
+              <option value="7">7 дней</option>
+              <option value="30" selected>30 дней</option>
+              <option value="90">90 дней</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="metrics">
+          <article class="metric">
+            <span class="metric__label">Визиты</span>
+            <strong id="stat-visits" class="metric__value">—</strong>
+          </article>
+          <article class="metric">
+            <span class="metric__label">Среднее время</span>
+            <strong id="stat-duration" class="metric__value">—</strong>
+          </article>
+          <article class="metric">
+            <span class="metric__label">Переходы в контакты</span>
+            <strong id="stat-contacts" class="metric__value">—</strong>
+          </article>
+          <article class="metric">
+            <span class="metric__label">Конверсия в контакты</span>
+            <strong id="stat-rate" class="metric__value">—</strong>
+          </article>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Откуда пришли</h3>
+            <div id="stat-referrers" class="table-wrap"></div>
+          </article>
+          <article class="card">
+            <h3>Какие разделы смотрели</h3>
+            <div id="stat-sections" class="table-wrap"></div>
+          </article>
+        </div>
+
+        <article class="card">
+          <h3>Последние визиты</h3>
+          <div id="stat-recent" class="table-wrap"></div>
+        </article>
+      </section>
+
+      <section id="panel-texts" class="panel">
+        <div class="panel-head">
+          <h2>Тексты на сайте</h2>
+          <button type="button" id="save-texts-btn" class="btn btn--primary">Сохранить тексты</button>
+        </div>
+        <p id="texts-status" class="status" hidden></p>
+        <div id="texts-editor" class="editor-stack"></div>
+      </section>
+
+      <section id="panel-contacts" class="panel">
+        <div class="panel-head">
+          <h2>Контактные данные</h2>
+          <button type="button" id="save-contacts-btn" class="btn btn--primary">Сохранить контакты</button>
+        </div>
+        <p id="contacts-status" class="status" hidden></p>
+        <div id="contacts-editor" class="editor-stack"></div>
+      </section>
+
+      <section id="panel-portfolio" class="panel">
+        <div class="panel-head">
+          <h2>Кейсы портфолио</h2>
+          <button type="button" id="save-portfolio-btn" class="btn btn--primary">Сохранить кейсы</button>
+        </div>
+        <p id="portfolio-status" class="status" hidden></p>
+        <article class="card editor-block" id="new-project-form">
+          <h3>Новый проект</h3>
+          <div class="editor-grid" id="new-project-fields"></div>
+          <button type="button" id="add-project-btn" class="btn btn--primary">Создать проект</button>
+        </article>
+        <div id="portfolio-editor" class="editor-stack"></div>
+      </section>
+
+      <section id="panel-upload" class="panel">
+        <div class="panel-head">
+          <h2>Загрузка фото</h2>
+        </div>
+        <form id="upload-form" class="card card--narrow upload-form">
+          <label class="field">
+            <span>Проект</span>
+            <select id="upload-project" required></select>
+          </label>
+          <label class="field">
+            <span>Тип файла</span>
+            <select id="upload-type" required>
+              <option value="preview">Превью (карточка 4:3)</option>
+              <option value="gallery">Фото в галерею</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Файл</span>
+            <input type="file" id="upload-file" accept="image/*" required>
+          </label>
+          <p id="upload-status" class="status" hidden></p>
+          <button type="submit" class="btn btn--primary">Загрузить</button>
+        </form>
+        <p class="hint muted">Превью заменяет «Превью.png». Галерея добавляет «фотоN» в папку проекта.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="/admin/admin.js?v=7"></script>
+</body>
+</html>
