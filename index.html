@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Точка схода — консалтинг для предпринимателей: стратегия, бренд, маркетинг, маркетплейсы, сайты и автоматизация под ключ.">
-  <title>Точка схода — упаковка бизнеса под ключ</title>
+  <meta name="description" content="Точка схода — агентство полного цикла: брендинг, маркетинг, маркетплейсы, сайты и автоматизация. Портфолио кейсов и системная упаковка бизнеса.">
+  <title>Точка схода — агентство упаковки бизнеса</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,13 +14,14 @@
 
   <div class="scroll-progress" aria-hidden="true"></div>
 
-  <header class="header" id="top">
+  <header class="header">
     <div class="container header__inner">
-      <a href="#top" class="logo">Точка <span>схода</span></a>
+      <a href="#hero" class="logo" data-home-link>Точка схода</a>
       <nav class="nav" aria-label="Основная навигация">
         <a href="#directions" data-nav-link>Услуги</a>
-        <a href="#packages" data-nav-link>Пакеты</a>
-        <a href="#founders" data-nav-link>Команда</a>
+        <a href="#portfolio" data-nav-link>Портфолио</a>
+        <a href="#process" data-nav-link>Как работаем</a>
+        <a href="#about" data-nav-link>О нас</a>
         <a href="#contact" data-nav-link>Контакты</a>
       </nav>
       <div class="header__actions">
@@ -34,18 +35,16 @@
     <div class="nav-drawer__backdrop" data-drawer-close></div>
     <div class="nav-drawer__panel">
       <div class="nav-drawer__head">
-        <span class="logo">Точка <span>схода</span></span>
+        <a href="#hero" class="logo" data-home-link data-drawer-close>Точка схода</a>
         <button type="button" class="nav-drawer__close" data-drawer-close aria-label="Закрыть">×</button>
       </div>
       <p class="nav-drawer__label">Разделы</p>
       <a href="#directions" data-nav-link data-drawer-close>Услуги и направления</a>
-      <a href="#packages" data-nav-link data-drawer-close>Пакеты</a>
-      <a href="#founders" data-nav-link data-drawer-close>Команда</a>
+      <a href="#portfolio" data-nav-link data-drawer-close>Портфолио</a>
       <a href="#process" data-nav-link data-drawer-close>Как работаем</a>
-      <a href="#pricing" data-nav-link data-drawer-close>Цены</a>
-      <a href="#faq" data-nav-link data-drawer-close>FAQ</a>
+      <a href="#about" data-nav-link data-drawer-close>О нас</a>
       <a href="#contact" data-nav-link data-drawer-close>Контакты</a>
-      <p class="nav-drawer__label">Быстрый вход</p>
+      <p class="nav-drawer__label">Направления</p>
       <a href="#marketing-branding" data-drawer-close>Бренд и маркетинг</a>
       <a href="#marketplaces" data-drawer-close>Маркетплейсы</a>
       <a href="#web-automation" data-drawer-close>Сайты и боты</a>
@@ -55,53 +54,31 @@
 
   <nav class="nav-rail" aria-label="Быстрая навигация">
     <a href="#directions" title="Услуги">Услуги</a>
-    <a href="#packages" title="Пакеты">Пакеты</a>
-    <a href="#founders" title="Команда">Команда</a>
+    <a href="#portfolio" title="Портфолио">Кейсы</a>
+    <a href="#process" title="Процесс">Процесс</a>
     <a href="#contact" title="Контакты">Связь</a>
   </nav>
 
   <main>
 
     <section class="hero" id="hero">
-      <div id="waves-hero" class="hero__waves" aria-hidden="true"></div>
-      <div class="hero__overlay" aria-hidden="true"></div>
-
       <div class="container hero__layout">
         <div class="hero__copy reveal">
-          <div class="hero__meta">
-            <span class="chip chip--accent">AI в процессах</span>
-            <span class="chip chip--muted">vibe-coding · автоматизация</span>
-          </div>
-          <p class="hero__tags">Маркетинг · Брендинг · Маркетплейсы · Сайты</p>
-          <p class="hero__slogan"><span class="text-accent">Точка,</span> где бизнес перестаёт расползаться и начинает работать как система</p>
           <h1 class="hero__title">Упаковываем бизнес под ключ — от стратегии до заявок</h1>
-          <p class="hero__subtitle">Стратегия, бренд, маркетплейсы, сайты и рутина — в одних руках. Вы управляете бизнесом, мы собираем систему вокруг него.</p>
+          <p class="hero__subtitle">Агентство полного цикла — стратегия, бренд, маркетинг, маркетплейсы, сайты и автоматизация — в одних руках. Вы управляете бизнесом, мы собираем систему вокруг него.</p>
           <div class="hero__actions">
             <a href="#contact" class="btn btn--primary">Обсудить проект</a>
-            <a href="#directions" class="btn btn--ghost">Направления</a>
+            <a href="#portfolio" class="btn btn--ghost">Смотреть кейсы</a>
           </div>
-          <div class="hero__routes">
-            <a href="#marketing-branding" class="route-pill">Бренд · маркетинг</a>
-            <a href="#marketplaces" class="route-pill">Ozon · WB</a>
-            <a href="#web-automation" class="route-pill">Сайт · боты</a>
-          </div>
+          <ul class="hero__services" aria-label="Направления">
+            <li>Стратегия</li>
+            <li>Брендинг</li>
+            <li>Сайты и автоматизация</li>
+          </ul>
         </div>
 
-        <div class="hero__people reveal">
-          <figure class="portrait portrait--natasha">
-            <img src="assets/natasha.png" alt="Наташа Черныш" width="480" height="640" loading="eager">
-            <figcaption>
-              <strong>Наташа Черныш</strong>
-              <span>стратегия · маркетинг · бренд · AI</span>
-            </figcaption>
-          </figure>
-          <figure class="portrait portrait--mark">
-            <img src="assets/mark.png" alt="Марк Черныш" width="480" height="640" loading="eager">
-            <figcaption>
-              <strong>Марк Черныш</strong>
-              <span>маркетплейсы · продажи · операционка</span>
-            </figcaption>
-          </figure>
+        <div class="hero__collage">
+          <div class="hero-tags" id="hero-tags" aria-label="Проекты — перейти в портфолио"></div>
         </div>
       </div>
     </section>
@@ -127,7 +104,7 @@
             <p>Продажи есть, но неясно, где теряются деньги.</p>
           </article>
           <article class="audience-card reveal">
-            <h3>Нужны одни руки</h3>
+            <h3>Нужна одна команда</h3>
             <p>Не искать пять специалистов — отдать упаковку целиком.</p>
           </article>
         </div>
@@ -213,161 +190,170 @@
       </div>
     </section>
 
-    <section class="section" id="packages">
+    <section class="section" id="portfolio">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">Форматы</p>
-          <h2 class="section-title">Можно точечно. Можно под ключ.</h2>
+          <p class="eyebrow">Портфолио</p>
+          <h2 class="section-title">Кейсы, которые говорят сами</h2>
+          <p class="section-lead">Брендинг, маркетплейсы, digital и упаковка — реальные проекты, не moodboard ради moodboard.</p>
         </header>
-        <div class="packages-grid">
-          <article class="package-card reveal">
-            <h3>Диагностика и стратегия</h3>
-            <p class="package-card__for">Понять, куда двигаться и где теряются деньги.</p>
-            <p class="package-card__price">от 60 000 ₽</p>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal portfolio-card--open" id="case-tish" data-case="tish" tabindex="0" role="button" aria-label="Открыть кейс: Тишь да пар">
+            <div class="portfolio-card__media">
+              <img src="assets/Тишь да пар/Превью.png" alt="Тишь да пар" width="800" height="600" loading="lazy">
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Бренд · digital</span>
+              <h3>Тишь да пар</h3>
+              <p>Загородный отдых: нейминг, визуал и упаковка VK</p>
+            </div>
           </article>
-          <article class="package-card reveal">
-            <h3>Запуск бизнеса</h3>
-            <p class="package-card__for">Фундамент при выходе на рынок.</p>
-            <p class="package-card__price">от 220 000 ₽</p>
+
+          <article class="portfolio-card reveal portfolio-card--open" id="case-marmori" data-case="marmori" tabindex="0" role="button" aria-label="Открыть кейс: marmori">
+            <div class="portfolio-card__media">
+              <img src="assets/marmori/Превью.png" alt="marmori" width="800" height="600" loading="lazy">
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Упаковка · MP</span>
+              <h3>marmori</h3>
+              <p>Подарочные наборы и визуал для маркетплейса</p>
+            </div>
           </article>
-          <article class="package-card reveal">
-            <h3>Упаковка под ключ</h3>
-            <p class="package-card__for">Бренд, сайт, соцсети, MP, автоматизация.</p>
-            <p class="package-card__price">от 320 000 ₽</p>
+
+          <article class="portfolio-card reveal portfolio-card--open" id="case-daizy" data-case="daizy" tabindex="0" role="button" aria-label="Открыть кейс: Daizy Mitchell">
+            <div class="portfolio-card__media">
+              <img src="assets/Daizy Mitchell/Превью.png" alt="Daizy Mitchell" width="800" height="600" loading="lazy">
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Брендинг · контент</span>
+              <h3>Daizy Mitchell</h3>
+              <p>Брендбук, lookbook и контент-система</p>
+            </div>
           </article>
-          <article class="package-card reveal">
-            <h3>Внешний маркетинговый отдел</h3>
-            <p class="package-card__for">Операционка и контроль в одних руках.</p>
-            <p class="package-card__price">от 120 000 ₽/мес</p>
+
+          <article class="portfolio-card reveal portfolio-card--open" id="case-bellissima" data-case="bellissima" tabindex="0" role="button" aria-label="Открыть кейс: Bellissima">
+            <div class="portfolio-card__media">
+              <img src="assets/Bellissima/Превью.png" alt="Bellissima" width="800" height="600" loading="lazy">
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Контент</span>
+              <h3>Bellissima</h3>
+              <p>Визуал и подача премиального бренда</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal portfolio-card--open" id="case-mp" data-case="mp" tabindex="0" role="button" aria-label="Открыть кейс: Нижнее белье и колготки">
+            <div class="portfolio-card__media">
+              <img src="assets/Нижнее белье и колготки/Превью.png" alt="Нижнее белье и колготки" width="800" height="600" loading="lazy">
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Маркетплейсы</span>
+              <h3>Нижнее белье и колготки</h3>
+              <p>Rich-контент для Ozon и Wildberries</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal portfolio-card--open" id="case-digital" data-case="digital" tabindex="0" role="button" aria-label="Открыть кейс: Сайты, лендинги, боты">
+            <div class="portfolio-card__media">
+              <img src="assets/Сайты, лендинги, боты/Превью.png" alt="Сайты, лендинги, боты" width="800" height="600" loading="lazy">
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Сайты · автоматизация</span>
+              <h3>Сайты, лендинги, боты</h3>
+              <p>Цифровые решения и автоматизация под задачу бизнеса</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal portfolio-card--open" id="case-limonades" data-case="limonades" tabindex="0" role="button" aria-label="Открыть кейс: Итальянские лимонады">
+            <div class="portfolio-card__media">
+              <img src="assets/Итальянские лимонады/Превью.png" alt="Итальянские лимонады" width="800" height="600" loading="lazy">
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Каталог · B2B</span>
+              <h3>Итальянские лимонады</h3>
+              <p>Каталоги, ассортимент и материалы для дистрибьюторов</p>
+            </div>
           </article>
         </div>
-        <p class="section-note reveal"><a href="#pricing">Полный прайс →</a></p>
       </div>
     </section>
 
-    <section class="section section--dark" id="why">
-      <div class="container">
-        <header class="section__head reveal">
-          <h2 class="section-title">Собираем бизнес в систему — не продаём набор услуг</h2>
-        </header>
-        <ul class="why-list reveal">
-          <li>Сначала цифры и бизнес — потом инструменты</li>
-          <li>Маркетинг, бренд, MP, сайты и AI — в одной связке</li>
-          <li>Работаем с собственниками, не «красиво ради красиво»</li>
-          <li>Освобождаем голову от рутины — вы возвращаетесь к управлению</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="founders">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow">Основатели</p>
-          <h2 class="section-title">Две экспертизы. Один взгляд.</h2>
-        </header>
-        <div class="founders-grid">
-          <article class="founder-card reveal">
-            <div class="founder-card__photo founder-card__photo--natasha">
-              <img src="assets/natasha.png" alt="Наташа Черныш" width="400" height="533" loading="lazy">
-            </div>
-            <div>
-              <h3>Наташа Черныш</h3>
-              <p class="founder-card__role">Маркетолог · аналитик · бизнес-коуч</p>
-              <p>Цифры, ЦА, стратегия, AI в командах. Решения для собственников — не декоративный маркетинг.</p>
-            </div>
-          </article>
-          <article class="founder-card reveal">
-            <div class="founder-card__photo founder-card__photo--mark">
-              <img src="assets/mark.png" alt="Марк Черныш" width="400" height="533" loading="lazy">
-            </div>
-            <div>
-              <h3>Марк Черныш</h3>
-              <p class="founder-card__role">Маркетплейсы и продажи</p>
-              <p>Владелец сети на WB и Ozon. Продажи, поставки, кабинеты — изнутри экономики магазина.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--glass" id="process">
+    <section class="section section--process" id="process">
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow">Процесс</p>
-          <h2 class="section-title">От хаоса к плану</h2>
+          <h2 class="section-title">Как мы работаем</h2>
+          <p class="section-lead">Пять шагов от хаоса к системе — с понятными точками контроля на каждом этапе.</p>
         </header>
-        <ol class="process-line reveal">
-          <li><strong>Знакомство</strong> — 30 мин, цели и ограничения</li>
-          <li><strong>Аудит</strong> — ниша, упаковка, каналы</li>
-          <li><strong>Смета</strong> — формат под задачу</li>
-          <li><strong>Реализация</strong> — сроки и контроль</li>
-          <li><strong>Рост</strong> — цифры, гипотезы, масштаб</li>
+        <ol class="process-route reveal">
+          <li class="process-route__step">
+            <span class="process-route__num">01</span>
+            <strong>Знакомство</strong>
+            <p>30 минут: цели, ограничения, что уже пробовали.</p>
+          </li>
+          <li class="process-route__step">
+            <span class="process-route__num">02</span>
+            <strong>Аудит</strong>
+            <p>Ниша, упаковка, каналы — находим, где теряются деньги.</p>
+          </li>
+          <li class="process-route__step">
+            <span class="process-route__num">03</span>
+            <strong>Смета</strong>
+            <p>Формат и объём под задачу — без скрытых «а ещё вот это».</p>
+          </li>
+          <li class="process-route__step">
+            <span class="process-route__num">04</span>
+            <strong>Реализация</strong>
+            <p>Сроки, контроль, промежуточные точки — вы в курсе.</p>
+          </li>
+          <li class="process-route__step">
+            <span class="process-route__num">05</span>
+            <strong>Рост</strong>
+            <p>Цифры, гипотезы, масштаб — система работает дальше.</p>
+          </li>
         </ol>
       </div>
     </section>
 
-    <section class="section" id="pricing">
+    <section class="section section--glass" id="about">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">Стоимость</p>
-          <h2 class="section-title">Порядок цен</h2>
+          <p class="eyebrow">О нас</p>
+          <h2 class="section-title">Команда, которая собирает маркетинг в систему</h2>
+          <p class="section-lead">«Точка схода» — агентство полного цикла. Стратегия, бренд, digital, маркетплейсы и автоматизация — одна команда, один процесс, одна ответственность за результат.</p>
         </header>
-        <div class="pricing-grid reveal">
-          <div class="pricing-row"><span>Стратегический аудит</span><strong>от 60 000 ₽</strong></div>
-          <div class="pricing-row"><span>Маркетинговая стратегия</span><strong>от 120 000 ₽</strong></div>
-          <div class="pricing-row"><span>Брендинг</span><strong>от 95 000 ₽</strong></div>
-          <div class="pricing-row"><span>Бренд + цифровое присутствие</span><strong>от 180 000 ₽</strong></div>
-          <div class="pricing-row"><span>Бренд под ключ</span><strong>от 320 000 ₽</strong></div>
-          <div class="pricing-row"><span>Лендинг</span><strong>от 80 000 ₽</strong></div>
-          <div class="pricing-row"><span>Сайт</span><strong>от 150 000 ₽</strong></div>
-          <div class="pricing-row"><span>Telegram-бот</span><strong>от 30 000 ₽</strong></div>
-          <div class="pricing-row"><span>Ведение маркетплейсов</span><strong>от 40 000 ₽/мес</strong></div>
-          <div class="pricing-row"><span>Запуск на маркетплейсах</span><strong>от 150 000 ₽</strong></div>
-          <div class="pricing-row"><span>Внешнее продвижение</span><strong>от 35 000 ₽</strong></div>
-          <div class="pricing-row"><span>Внешний маркетинговый отдел</span><strong>от 120 000 ₽/мес</strong></div>
-        </div>
-        <p class="pricing-note reveal">Финальная сумма — после короткого аудита. Проекты индивидуальны.</p>
-      </div>
-    </section>
 
-    <section class="section section--glass" id="faq">
-      <div class="container">
-        <header class="section__head reveal">
-          <h2 class="section-title">FAQ</h2>
-        </header>
-        <div class="faq-list reveal">
-          <details class="faq-item">
-            <summary>Можно прийти только за одной услугой?</summary>
-            <p class="faq-item__answer">Да. Три направления — самостоятельные входы.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Вы работаете только с маркетплейсами?</summary>
-            <p class="faq-item__answer">Нет. MP — одно из направлений; параллельно стратегия, бренд, сайты, реклама.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Можно ли начать с аудита?</summary>
-            <p class="faq-item__answer">Да — без обязательства сразу брать большой пакет.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Сколько длится запуск под ключ?</summary>
-            <p class="faq-item__answer">От нескольких недель до 2–3 месяцев — фиксируем в смете после аудита.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Вы занимаетесь рекламой и сайтами?</summary>
-            <p class="faq-item__answer">Да: продвижение, лендинги, тексты, боты — отдельно или в упаковке.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Можно передать всё сопровождение?</summary>
-            <p class="faq-item__answer">Да, формат внешнего маркетингового отдела как раз про это.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Почему цены «от»?</summary>
-            <p class="faq-item__answer">Разный масштаб и ниша — смета после короткого аудита.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Что подготовить перед стартом?</summary>
-            <p class="faq-item__answer">Рассказать, что продаёте, что болит; по возможности — цифры и ссылки на текущие каналы.</p>
-          </details>
+        <ul class="about-points reveal">
+          <li>Работаем с собственниками — цифры и бизнес важнее «красиво ради красиво»</li>
+          <li>Маркетинг, бренд, MP, сайты и AI — в одной связке, без потери контекста</li>
+          <li>Берём рутину на себя — вы возвращаетесь к управлению, а не к микроменеджменту подрядчиков</li>
+        </ul>
+
+        <div class="about-founders reveal">
+          <p class="about-founders__label">Основатели бренда</p>
+          <div class="about-founders__grid">
+            <article class="about-founder">
+              <div class="about-founder__photo about-founder__photo--natasha">
+                <img src="assets/natasha.png" alt="Наталья Черныш" width="400" height="533" loading="lazy">
+              </div>
+              <div>
+                <h3>Наталья Черныш</h3>
+                <p class="about-founder__role">Стратегия · маркетинг · бренд · AI</p>
+                <p>Цифры, ЦА, стратегия и внедрение AI в процессы. Решения для собственников — не декоративный маркетинг.</p>
+              </div>
+            </article>
+            <article class="about-founder">
+              <div class="about-founder__photo about-founder__photo--mark">
+                <img src="assets/mark.png" alt="Марк Черныш" width="400" height="533" loading="lazy">
+              </div>
+              <div>
+                <h3>Марк Черныш</h3>
+                <p class="about-founder__role">Маркетплейсы · продажи · операционка</p>
+                <p>Владелец сети на WB и Ozon. Продажи, поставки, кабинеты — изнутри экономики магазина.</p>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -393,6 +379,26 @@
 
   </main>
 
+  <div class="portfolio-modal" id="portfolio-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="portfolio-modal-title">
+    <div class="portfolio-modal__backdrop" data-portfolio-close></div>
+    <div class="portfolio-modal__panel">
+      <button type="button" class="portfolio-modal__close" data-portfolio-close aria-label="Закрыть">×</button>
+      <header class="portfolio-modal__head">
+        <p class="portfolio-modal__tag" id="portfolio-modal-tag"></p>
+        <h3 class="portfolio-modal__title" id="portfolio-modal-title"></h3>
+      </header>
+      <div class="portfolio-modal__stage">
+        <button type="button" class="portfolio-modal__nav portfolio-modal__nav--prev" data-portfolio-prev aria-label="Предыдущее фото">‹</button>
+        <div class="portfolio-modal__viewport" id="portfolio-modal-viewport">
+          <img class="portfolio-modal__img" id="portfolio-modal-img" alt="">
+        </div>
+        <button type="button" class="portfolio-modal__nav portfolio-modal__nav--next" data-portfolio-next aria-label="Следующее фото">›</button>
+      </div>
+      <p class="portfolio-modal__counter"><span id="portfolio-modal-current">1</span> / <span id="portfolio-modal-total">1</span></p>
+      <div class="portfolio-modal__dots" id="portfolio-modal-dots" role="tablist" aria-label="Слайды проекта"></div>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container footer__inner">
       <span>© 2026 Точка схода</span>
@@ -400,6 +406,7 @@
     </div>
   </footer>
 
+  <script src="js/images.js"></script>
   <script src="js/waves.js"></script>
   <script src="js/main.js"></script>
 </body>
