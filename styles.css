@@ -19,7 +19,8 @@
   --peach: #edd5c8;
   --process-bg: #f8f3ed;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
-  --display: "Cormorant Garamond", Georgia, serif;
+  --heading: "Manrope", system-ui, sans-serif;
+  --logo: "Cormorant Garamond", Georgia, serif;
   --body: "Manrope", system-ui, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --header-h: 64px;
@@ -114,10 +115,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .logo {
-  font-family: var(--display);
+  font-family: var(--logo);
   font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .logo span { font-weight: 400; color: var(--text-muted); }
@@ -353,11 +354,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .section-title {
-  font-family: var(--display);
-  font-size: clamp(1.85rem, 4vw, 2.75rem);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-family: var(--heading);
+  font-size: clamp(1.75rem, 3.8vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
   margin: 0 0 0.75rem;
 }
 
@@ -446,9 +447,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   padding-top: var(--header-h);
   overflow: visible;
   background-color: #f3eee7;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'%3E%3Cg fill='none' stroke='%23b8a99a' stroke-width='0.65' opacity='0.22'%3E%3Cellipse cx='450' cy='420' rx='90' ry='58'/%3E%3Cellipse cx='450' cy='420' rx='150' ry='95'/%3E%3Cellipse cx='450' cy='420' rx='210' ry='132'/%3E%3Cellipse cx='450' cy='420' rx='270' ry='168'/%3E%3Cellipse cx='450' cy='420' rx='330' ry='205'/%3E%3Cellipse cx='450' cy='420' rx='390' ry='242'/%3E%3Cellipse cx='200' cy='180' rx='70' ry='45'/%3E%3Cellipse cx='200' cy='180' rx='120' ry='78'/%3E%3Cellipse cx='200' cy='180' rx='170' ry='110'/%3E%3Cellipse cx='720' cy='640' rx='80' ry='52'/%3E%3Cellipse cx='720' cy='640' rx='140' ry='90'/%3E%3Cellipse cx='720' cy='640' rx='200' ry='128'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 920px 920px;
-  background-position: 60% 20%;
+}
+
+.hero__waves {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero__layout {
@@ -475,13 +480,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .hero__title {
-  font-family: var(--display);
-  font-size: clamp(2.35rem, 4.8vw, 3.85rem);
-  font-weight: 600;
-  line-height: 1.04;
-  letter-spacing: -0.03em;
+  font-family: var(--heading);
+  font-size: clamp(2.15rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
   margin: 0 0 1.25rem;
-  max-width: 14.5ch;
+  max-width: 16ch;
 }
 
 .hero__subtitle {
@@ -775,8 +780,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .audience-card h3 {
-  font-family: var(--display);
-  font-size: 1.25rem;
+  font-family: var(--heading);
+  font-size: 1.15rem;
+  font-weight: 700;
   margin: 0 0 0.4rem;
 }
 
@@ -825,9 +831,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .dir-panel.is-active { display: block; }
 
 .dir-panel__title {
-  font-family: var(--display);
-  font-size: 1.65rem;
-  font-weight: 600;
+  font-family: var(--heading);
+  font-size: 1.5rem;
+  font-weight: 700;
   margin: 0 0 0.35rem;
 }
 
@@ -968,9 +974,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .portfolio-card h3 {
-  font-family: var(--display);
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-family: var(--heading);
+  font-size: 1.15rem;
+  font-weight: 700;
   margin: 0 0 0.35rem;
 }
 
@@ -1056,9 +1062,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .portfolio-modal__title {
   margin: 0;
-  font-family: var(--display);
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-  font-weight: 600;
+  font-family: var(--heading);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
 }
 
 .portfolio-modal__stage {
@@ -1215,10 +1221,10 @@ body.portfolio-modal-open {
 
 .process-route__num {
   display: block;
-  font-family: var(--display);
-  font-size: clamp(2.25rem, 4vw, 3rem);
-  font-weight: 300;
-  line-height: 1;
+  font-family: var(--heading);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.05;
   color: var(--accent);
   margin-bottom: 0.5rem;
 }
@@ -1324,8 +1330,9 @@ body.portfolio-modal-open {
 }
 
 .about-founder h3 {
-  font-family: var(--display);
-  font-size: 1.35rem;
+  font-family: var(--heading);
+  font-size: 1.2rem;
+  font-weight: 700;
   margin: 0 0 0.25rem;
 }
 

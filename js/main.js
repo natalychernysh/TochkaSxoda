@@ -275,6 +275,25 @@
   const navLinks = document.querySelectorAll('[data-nav-link]');
   const progressBar = document.querySelector('.scroll-progress');
 
+  const wavesHeroOpts = {
+    lineColor: 'rgba(160, 152, 145, 0.28)',
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    waveSpeedX: 0.01,
+    waveSpeedY: 0.01,
+    waveAmpX: 40,
+    waveAmpY: 20,
+    friction: 0.9,
+    tension: 0.01,
+    maxCursorMove: 120,
+    xGap: 12,
+    yGap: 36
+  };
+
+  const wavesHero = document.getElementById('waves-hero');
+  if (wavesHero && window.Waves) {
+    new window.Waves(wavesHero, wavesHeroOpts);
+  }
+
   const wavesOpts = {
     lineColor: 'rgba(90, 70, 60, 0.45)',
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
